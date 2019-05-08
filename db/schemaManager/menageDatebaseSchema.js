@@ -7,7 +7,7 @@ module.exports = async ({modus, postgres, scriptsPath}) => {
     console.info('Managing database schema.')
     const now = new Date()
     if (modus === 'deleteAllData') {
-      //await deleteAllData({logger: , postgres, scriptsPath})
+      //await deleteAllData({postgres, scriptsPath})
     } else {
       const databaseHasBeenCreated = await createOrRecreateDatabase({
         modus,
