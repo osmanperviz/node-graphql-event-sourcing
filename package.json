@@ -1,0 +1,25 @@
+{
+  "name": "graphql-event-sourcing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --inspect index.js",
+    "recreateSchema": "node index.js -recreateSchema"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "3.0.6",
+    "common-tags": "^1.8.0",
+    "cors": "2.8.5",
+    "express": "4.16.4",
+    "express-graphql": "0.8.0",
+    "graphql": "14.2.1",
+    "is-my-json-valid": "^2.19.0",
+    "knex": "^0.16.5",
+    "pg": "7.10.0",
+    "pg-cursor": "2.0.0"
+  }
+}
