@@ -1,6 +1,7 @@
 const server = require('./lib/server')
 const graphqlServer = require('./lib/graphql/graphqlServer')
 const appServer = require('./lib/server')
+const connectionPool = require('./db/connectionPool')
 
 const run = async () => {
   try {
@@ -14,6 +15,7 @@ const run = async () => {
       await graphqlServer.upgradeSchema()
     }
     await graphqlServer.start()
+    await connectionPool.initialize()
   } catch (error) {
     process.exitCode = 1
     console.log(error)

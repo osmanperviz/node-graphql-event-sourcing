@@ -1,6 +1,6 @@
 'use strict'
 
-const config = require('config')
+const config = require('../config')
 const Cursor = require('pg-cursor')
 const {Pool} = require('pg')
 const util = require('util')
@@ -12,9 +12,7 @@ exports.initialize = async () => {
     pool = new Pool({
       host: config.postgres.host,
       port: config.postgres.port,
-      database: config.postgres.database,
-      user: config.postgres.user,
-      password: config.postgres.password
+      database: config.postgres.database
     })
     console.log('Initialized connection pool.')
   } catch (error) {
