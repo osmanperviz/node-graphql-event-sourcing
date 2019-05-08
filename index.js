@@ -1,5 +1,6 @@
 const server = require('./lib/server')
 const graphqlServer = require('./lib/graphql/graphqlServer')
+const appServer = require('./lib/server')
 
 const run = async () => {
   try {
@@ -12,6 +13,7 @@ const run = async () => {
     } else if (process.argv[2] === '-upgradeSchema') {
       await graphqlServer.upgradeSchema()
     }
+    await graphqlServer.start()
   } catch (error) {
     process.exitCode = 1
     console.log(error)

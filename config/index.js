@@ -1,6 +1,6 @@
 module.exports = {
   postgres: {
-    database: 'node-graphql-event-sourcing',
+    database: 'node_graphql_event_sourcing',
     host: 'localhost',
     port: 5432
   }
